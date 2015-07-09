@@ -97,7 +97,12 @@ DATABASES = {
     }
 }
 
-
+CACHES = {
+    'default': {
+        'BACKEND': 'redis_cache.RedisCache',
+        'LOCATION': '/var/run/redis/redis.sock',
+    },
+}
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
 
