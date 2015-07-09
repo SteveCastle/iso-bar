@@ -39,7 +39,16 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'rest_framework',
     'reversion',
-    'core'
+    'core',
+    'drssauth',
+    'applications',
+    'events',
+    'finance',
+    'openstore',
+    'operations',
+    'realestate',
+    'reporting',
+    'scheduling'
 )
 
 MIDDLEWARE_CLASSES = (
