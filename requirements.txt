@@ -2,3 +2,6 @@ psycopg2
 django
 djangorestframework
 django-reversion
+geopy
+sorl-thumbnail
+django-storages
