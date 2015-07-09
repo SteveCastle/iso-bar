@@ -7,3 +7,4 @@ geopy
 sorl-thumbnail
 django-storages
 django-redis-cache
+Celery
