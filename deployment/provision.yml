@@ -24,3 +24,4 @@
      postgresql_user: db=drss_db name=django password=z3ld2 priv=ALL
      sudo: yes
      sudo_user: postgres
+- include: deploy.yml

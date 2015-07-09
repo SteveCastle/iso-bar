@@ -3,7 +3,7 @@
     - vars.yml
   gather_facts: false
   sudo: true
-  sudo_user: docMan
+  sudo_user: easytrack
 
   tasks:
   - name: Pull sources from the repository.
@@ -13,6 +13,6 @@
   - name: Upgrade the virtualenv.
     pip: requirements={{ project_root }}/code/requirements.txt virtualenv={{ project_root }}/env/
   - name: Install django settings file.
-    copy: src=/vagrant/deployment/files/settings/settings_dev.py dest={{ project_root }}/code/easytrack/settings.py
+    copy: src=/vagrant/deployment/files/settings/dev_settings.py dest={{ project_root }}/code/easytrack/easytrack/settings.py
   handlers:
     - include: handlers.yml
