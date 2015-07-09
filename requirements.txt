@@ -1,7 +1,9 @@
 psycopg2
 django
+redis
 djangorestframework
 django-reversion
 geopy
 sorl-thumbnail
 django-storages
+django-redis-cache
