@@ -1,0 +1,18 @@
+- hosts: local
+  vars_files:
+    - vars.yml
+  gather_facts: false
+  sudo: true
+  sudo_user: docMan
+
+  tasks:
+  - name: Pull sources from the repository.
+    git: repo={{ project_repo }} dest={{ project_root }}/code version={{ branch }}
+    notify:
+      - restart web frontend
+  - name: Upgrade the virtualenv.
+    pip: requirements={{ project_root }}/code/requirements.txt virtualenv={{ project_root }}/env/
+  - name: Install django settings file.
+    copy: src=/vagrant/deployment/files/settings/settings_dev.py dest={{ project_root }}/code/easytrack/settings.py
+  handlers:
+    - include: handlers.yml

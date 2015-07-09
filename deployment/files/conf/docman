@@ -1,0 +1,29 @@
+<VirtualHost *:80>
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
+</VirtualHost>
+
+<VirtualHost *:443>
+        ServerName drssone.com
+        ServerAlias drssone.com
+
+  WSGIDaemonProcess drssone.com  processes=2 threads=15
+  WSGIProcessGroup drssone.com
+
+        WSGIScriptAlias / /var/projects/docMan/static
+    <Directory /home/ubuntu/docMan/>
+        Order allow,deny
+        Allow from 24.234.125.251
+        Allow from 24.234.167.84
+        Allow from  All
+    </Directory>
+    Alias /static/ /var/projects/docMan/static
+    <Location "/static/">
+            Options -Indexes
+    </Location>
+SSLEngine on
+SSLCertificateKeyFile /etc/ssl/myserver.key
+SSLCertificateFile /etc/ssl/finance_drssone_com.crt
+SSLCertificateChainFile /etc/ssl/finance_drssone_com.ca-bundle
+</VirtualHost>

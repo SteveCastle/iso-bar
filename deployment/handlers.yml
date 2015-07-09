@@ -1,0 +1,11 @@
+- name: restart apache
+  service: name=apache2 state=restarted
+  sudo_user: root
+
+- name: reload apache
+  service: name=apache2 state=reloaded
+  sudo_user: root
+
+- name: restart web frontend
+  action: service name=apache2 state=restarted
+  sudo_user: root

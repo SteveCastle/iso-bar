@@ -1,0 +1,29 @@
+project_name: easytrack
+project_root: /var/projects/easytrack
+project_repo: https://stevecastle:fca3046a17281785a868385cfad11cd6584db487@github.com/SteveCastle/Easy-Track.git
+branch: master
+system_packages:
+  - build-essential
+  - git
+  - libevent-dev
+  - apache2
+  - postgresql
+  - postgresql-server-dev-all
+  - python-dev
+  - python-pip
+  - redis-server
+  - postfix
+  - apache2-mpm-prefork
+  - redis-server
+  - apache2-utils
+  - libexpat1
+  - libxml2-dev
+  - libxslt1-dev
+  - libapache2-mod-wsgi
+  - python-psycopg2
+  - libpq-dev
+  - libcurl4-gnutls-dev
+  - librtmp-dev
+  - ssl-cert
+python_packages:
+  - virtualenv
