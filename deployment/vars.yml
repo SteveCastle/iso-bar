@@ -27,3 +27,4 @@ system_packages:
   - ssl-cert
 python_packages:
   - virtualenv
+  - ipython
