@@ -9,6 +9,7 @@
 - name: restart web frontend
   action: service name=apache2 state=restarted
   sudo_user: root
+
 - name: restart redis cache
   action: service name=redis state=restarted
   sudo_user: root
