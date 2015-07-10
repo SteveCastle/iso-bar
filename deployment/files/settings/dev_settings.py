@@ -43,6 +43,7 @@ INSTALLED_APPS = (
     'drssauth',
     'applications',
     'events',
+    'employees',
     'finance',
     'openstore',
     'operations',
