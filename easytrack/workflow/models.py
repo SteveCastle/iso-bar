@@ -23,3 +23,7 @@ class Stage(models.Model):
 
     def on_exit(self):
         pass
+
+
+class Department(models.Model):
+    title = models.CharField(max_length=100)
