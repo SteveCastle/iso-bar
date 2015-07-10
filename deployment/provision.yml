@@ -21,7 +21,7 @@
      sudo: yes
      sudo_user: postgres
    - name: Create database user
-     postgresql_user: db=drss_db name=django password=z3ld2 priv=ALL role_attr_flags=CREATEDB
+     postgresql_user: db=drss_db name={{database_user}} password={{database_password}} priv=ALL role_attr_flags=CREATEDB
      sudo: yes
      sudo_user: postgres
 - include: deploy.yml
