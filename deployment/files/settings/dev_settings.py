@@ -41,7 +41,7 @@ INSTALLED_APPS = (
     'reversion',
     'contacts',
     'drssauth',
-    'applications',
+    'payments',
     'events',
     'employees',
     'finance',

@@ -2,7 +2,9 @@ from django.db import models
 from contacts.models import Contact
 
 class Project(models.Model):
-    pass
+
+    def get_email_list(self):
+        return []
 
 
 class Workflow(models.Model):
