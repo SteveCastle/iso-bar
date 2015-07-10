@@ -11,5 +11,5 @@
   sudo_user: root
 
 - name: restart redis cache
-  action: service name=redis state=restarted
+  action: service name=redis-server state=restarted
   sudo_user: root
