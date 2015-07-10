@@ -1,5 +1,5 @@
 from django.test import TestCase
-from core.models import Contact
+from contacts.models import Contact
 class ContactTestCase(TestCase):
     def setUp(self):
         Contact.objects.create(first_name="Stephen",
