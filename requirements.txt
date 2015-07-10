@@ -10,3 +10,4 @@ django-redis-cache
 Celery
 newrelic
 django-haystack
+coverage
