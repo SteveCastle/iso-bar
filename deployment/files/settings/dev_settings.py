@@ -39,7 +39,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'rest_framework',
     'reversion',
-    'core',
+    'contacts',
     'drssauth',
     'applications',
     'events',
@@ -125,7 +125,7 @@ TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
 # Tell nose to measure coverage on the 'foo' and 'bar' apps
 NOSE_ARGS = [
     '--with-coverage',
-    '--cover-package=core,docmanager',
+    '--cover-package=contacts,docmanager',
     '--verbosity=3'
 ]
 # Static files (CSS, JavaScript, Images)
