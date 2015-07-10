@@ -11,3 +11,5 @@ Celery
 newrelic
 django-haystack
 coverage
+nose
+django-nose
