@@ -1,6 +1,7 @@
 from django.db import models
 from contacts.models import Contact
 
+
 class Project(models.Model):
 
     def get_email_list(self):
