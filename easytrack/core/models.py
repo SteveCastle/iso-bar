@@ -20,4 +20,4 @@ class Contact(models.Model):
                                       self.street_address,
                                       self.city,
                                       self.state,
-                                      self.zip_code)
+                                      self.zipcode)
