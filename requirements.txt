@@ -8,3 +8,5 @@ sorl-thumbnail
 django-storages
 django-redis-cache
 Celery
+newrelic
+django-haystack
