@@ -15,7 +15,7 @@ class Contact(models.Model):
         return "%s %s"%(self.first_name, self.last_name)
 
     def get_formatted_address(self):
-        return "%s %s\n%s%s, %s %s"%(self.first_name,
+        return "%s %s\n%s\n%s, %s %s"%(self.first_name,
                                       self.last_name,
                                       self.street_address,
                                       self.city,
