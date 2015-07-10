@@ -48,7 +48,9 @@ INSTALLED_APPS = (
     'operations',
     'realestate',
     'reporting',
-    'scheduling'
+    'activities',
+    'docmanager',
+    'workflow'
 )
 
 MIDDLEWARE_CLASSES = (

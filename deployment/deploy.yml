@@ -16,6 +16,7 @@
     copy: src=/vagrant/deployment/files/settings/dev_settings.py dest={{ project_root }}/code/{{ project_name }}/{{ project_name }}/settings.py
   - name: Configure redis.
     copy: src=/vagrant/deployment/files/conf/redis.conf dest=/etc/redis/redis.conf
+    sudo_user: root
     notify:
       - restart redis cache
   - name: Migrate Django Database
