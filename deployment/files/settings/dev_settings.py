@@ -40,7 +40,7 @@ INSTALLED_APPS = (
     'rest_framework',
     'reversion',
     'contacts',
-    'auth',
+    'samsonauth',
     'payments',
     'events',
     'reporting',
