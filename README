@@ -3,6 +3,14 @@
 Isobar is a django seed project with ansible instrumentation for starting
 a generalized business application.
 
+## Features
+1. Redis caching.
+2. Data based auth system.
+3. Front end agnostic REST endpoints provided by Django Rest Framework.
+4. CMS by Django CMS.
+5. Django storages for CDN static files.
+6. Nose with coverage test runner.
+
 ## Installation
 
 1. Clone the isobar repository.

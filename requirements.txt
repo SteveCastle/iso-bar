@@ -13,3 +13,4 @@ django-haystack
 coverage
 nose
 django-nose
+django-cms
