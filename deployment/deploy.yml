@@ -3,7 +3,7 @@
     - vars.yml
   gather_facts: false
   sudo: true
-  sudo_user: easytrack
+  sudo_user: {{ project_name }}
 
   tasks:
   - name: Pull sources from the repository.

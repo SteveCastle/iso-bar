@@ -1,7 +1,6 @@
 project_name: isobar
 project_root: /var/projects/isobar
 project_repo: https://stevecastle:fca3046a17281785a868385cfad11cd6584db487@github.com/SteveCastle/Easy-Track.git
-database_user: django
 database_password: secretpassword
 branch: master
 system_packages:
