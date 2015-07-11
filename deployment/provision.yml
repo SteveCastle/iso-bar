@@ -17,7 +17,7 @@
      pip: name={{item}}
      with_items: "{{ python_packages }}"
    - name: Create database
-     postgresql_db: name=drss_db
+     postgresql_db: name={{project_name}}_db
      sudo: yes
      sudo_user: postgres
    - name: Create database user
