@@ -23,7 +23,11 @@ a generalized business application.
 
 ## Usage
 
-TODO: Write usage instructions
+1. The project is installed to /var/projects/isobar/code/isobar
+2. From the project directory you can `python manage.py createsuperuser`
+3. To run your app `python manage.py runserver 0.0.0.0:8080`
+4. To login to the admin screen in your browser go to localhost:8080/admin
+5. Now write some urls, views, and templates. It's that easy ya dingus.
 
 ## Contributing
 
