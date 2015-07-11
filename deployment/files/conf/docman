@@ -11,14 +11,14 @@ RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
   WSGIDaemonProcess drssone.com  processes=2 threads=15
   WSGIProcessGroup drssone.com
 
-        WSGIScriptAlias / /var/projects/easytrack/easytrack/wsgi.py
-    <Directory /var/projects/easytrack/>
+        WSGIScriptAlias / /var/projects/isobar/isobar/wsgi.py
+    <Directory /var/projects/isobar/>
         Order allow,deny
         Allow from 24.234.125.251
         Allow from 24.234.167.84
         Allow from  All
     </Directory>
-    Alias /static/ /var/projects/easytrack/static
+    Alias /static/ /var/projects/isobar/static
     <Location "/static/">
             Options -Indexes
     </Location>
