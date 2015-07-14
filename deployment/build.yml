@@ -1,2 +1,27 @@
--include: provision.yml
--include: deploy.yml
+- hosts: local
+  vars_files:
+    - vars.yml
+  tasks:
+   - name: Create the project directory.
+     file: state=directory path={{ project_root }}
+   - name: Create user.
+     user: home={{ project_root }}/home/ name={{ project_name }} state=present
+   - name: Update the project directory.
+     file: group={{ project_name }} owner={{ project_name }} mode=755 state=directory path={{ project_root }}
+   - name: Create the code directory.
+     file: group={{ project_name }} owner={{ project_name }} mode=755 state=directory path={{ project_root }}/code/
+   - name: Install required system packages.
+     apt: name={{item}} state=latest update_cache=true
+     with_items: "{{ system_packages }}"
+   - name: Install required python packages.
+     pip: name={{item}}
+     with_items: "{{ python_packages }}"
+   - name: Create database
+     postgresql_db: name={{project_name}}_db
+     sudo: yes
+     sudo_user: postgres
+   - name: Create database user
+     postgresql_user: db={{project_name}}_db name={{project_name}} password={{database_password}} priv=ALL role_attr_flags=CREATEDB
+     sudo: yes
+     sudo_user: postgres
+- include: dev.yml
