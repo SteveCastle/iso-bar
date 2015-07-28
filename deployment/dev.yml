@@ -9,7 +9,7 @@
   - name: Mount Project in code directory.
     file: src=/vagrant/{{project_name}} dest={{project_root}}/code/{{project_name}} state=link
   - name: Upgrade the virtualenv.
-    pip: requirements={{ project_root }}/code/isobar/requirements.txt virtualenv={{ project_root }}/env/
+    pip: requirements={{ project_root }}/code/{{ project_name }}/requirements.txt virtualenv={{ project_root }}/env/
   - name: Configure redis.
     copy: src=/vagrant/deployment/files/conf/redis.conf dest=/etc/redis/redis.conf
     sudo_user: root
