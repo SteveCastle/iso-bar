@@ -16,9 +16,7 @@ a generalized business application.
 1. Clone the isobar repository.
 2. Open a terminal in the isobar directory.
 3. Run `vagrant up`.
-4. Vagrant will create a vm and install ansible to complete the build process.
-5. Inside your virtual machine change directory to /vagrant/deployment.
-6. Run `ansible-playbook -s -k -u vagrant provision.yml`
+4. Vagrant will create a vm and run ansible to complete the build process.
 7. Congratulations you have a working django isobar project.
 
 ## Usage

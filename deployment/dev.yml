@@ -11,10 +11,9 @@
     pip: requirements={{ project_root }}/code/{{ project_name }}/requirements.txt virtualenv={{ project_root }}/env/
   - name: Configure redis.
     copy: src=/vagrant/deployment/files/conf/redis.conf dest=/etc/redis/redis.conf
+    become: yes
     become_user: root
     notify:
       - restart redis cache
-  - name: Migrate Django Database
-    django_manage: command=migrate app_path={{ project_root }}/code/{{ project_name }} virtualenv={{ project_root }}/env/
   handlers:
     - include: handlers.yml

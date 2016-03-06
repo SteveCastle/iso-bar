@@ -71,5 +71,6 @@ Vagrant.configure(2) do |config|
     sudo apt-get install -y ansible
     sudo mv /etc/ansible/hosts /etc/ansible/hosts.example
     sudo printf "[local]\n127.0.0.1">>/etc/ansible/hosts
+    ansible-playbook /vagrant/deployment/build.yml --connection=local
   SHELL
 end
