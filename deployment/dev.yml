@@ -2,8 +2,7 @@
   vars_files:
     - vars.yml
   gather_facts: false
-  sudo: true
-  sudo_user: "{{ project_name }}"
+  become_user: "{{ project_name }}"
 
   tasks:  
   - name: Mount Project in code directory.
@@ -12,7 +11,7 @@
     pip: requirements={{ project_root }}/code/{{ project_name }}/requirements.txt virtualenv={{ project_root }}/env/
   - name: Configure redis.
     copy: src=/vagrant/deployment/files/conf/redis.conf dest=/etc/redis/redis.conf
-    sudo_user: root
+    become_user: root
     notify:
       - restart redis cache
   - name: Migrate Django Database
