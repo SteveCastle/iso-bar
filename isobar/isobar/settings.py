@@ -41,13 +41,8 @@ INSTALLED_APPS = (
     'debug_toolbar',
     'djcelery',
     'reversion',
-    'contacts',
+    'core',
     'samsonauth',
-    'payments',
-    'events',
-    'reporting',
-    'activities',
-    'docmanager',
     'workflow'
 )
 
