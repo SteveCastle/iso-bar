@@ -100,7 +100,7 @@ DATABASES = {
 CACHES = {
     'default': {
         'BACKEND': 'redis_cache.RedisCache',
-        'LOCATION': '/var/run/redis/redis.sock',
+        'LOCATION': '/tmp/redis.sock',
     },
 }
 # Internationalization

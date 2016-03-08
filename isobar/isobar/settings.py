@@ -42,8 +42,6 @@ INSTALLED_APPS = (
     'djcelery',
     'reversion',
     'core',
-    'samsonauth',
-    'workflow'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -97,7 +95,7 @@ DATABASES = {
 CACHES = {
     'default': {
         'BACKEND': 'redis_cache.RedisCache',
-        'LOCATION': '/var/run/redis/redis.sock',
+        'LOCATION': '/tmp/redis.sock',
     },
 }
 # Internationalization
