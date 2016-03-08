@@ -9,6 +9,8 @@
     file: src=/vagrant/{{project_name}} dest={{project_root}}/code/{{project_name}} state=link
   - name: Upgrade the virtualenv.
     pip: requirements={{ project_root }}/code/{{ project_name }}/requirements.txt virtualenv={{ project_root }}/env/
+    become: yes
+    become_user: '{{project_name}}'
   - name: Configure redis.
     copy: src=/vagrant/deployment/files/conf/redis.conf dest=/etc/redis/redis.conf
     become: yes
