@@ -16,4 +16,17 @@
     notify:
       - restart redis cache
   handlers:
-    - include: handlers.yml
+  - name: restart apache
+    service: name=apache2 state=restarted
+    become: yes
+    become_user: root
+
+  - name: reload apache
+    service: name=apache2 state=reloaded
+    become: yes
+    become_user: root
+
+  - name: restart redis cache
+    service: name=redis-server state=restarted
+    become: yes
+    become_user: root
