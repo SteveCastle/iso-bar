@@ -15,6 +15,12 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+from core.views import HomeView, Articles, ArticleDetail, cool_view
+
 urlpatterns = [
+    url(r'^cool-view$', cool_view),
+    url(r'^$', HomeView.as_view()),
+    url(r'^articles/$', Articles.as_view()),
+    url(r'^articles/(?P<pk>[0-9]+)/$', ArticleDetail.as_view()),
     url(r'^admin/', include(admin.site.urls)),
 ]

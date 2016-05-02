@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+    <h2>{{object.title}}</h2>
+    <h4>{{object.post_date}}</h4>
+    <p>{{object.body}}</p>
+
+{% endblock %}
